@@ -326,6 +326,13 @@ html {
     transition: background-image 1s ease-in-out;
 }
 
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .landing-page {
+        background-image: url('../imgs/mobile.jpg');
+    }
+}
+
 .overlay {
     position: absolute;
     z-index: 2;

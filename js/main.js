@@ -252,8 +252,10 @@ function changeBackground() {
     }
 }
 
+
 // Call the function to start changing the background
 changeBackground();
+
 
 
 const bulletSpan = document.querySelectorAll(".Bullets-container span")
