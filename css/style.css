@@ -321,7 +321,7 @@ html {
 .landing-page {
     position: relative;
     min-height: 100vh;
-    background-image: url(/imgs/01.jpg);
+    background-image: url('../imgs/02.jpg');
     background-size: cover;
     transition: background-image 1s ease-in-out;
 }

@@ -291,7 +291,7 @@ function loadState () {
             backgroundOption = false
             document.querySelector(".no").classList.add("active")
         }
-            ChangeBackground();
+            changeBackground();
 
     } else {
         backgroundOption = true
