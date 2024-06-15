@@ -243,19 +243,27 @@ let backgroundOption = true;
 
 let changeInterval;
 
-function changeBackground() {
-    if (backgroundOption === true) {
-        changeInterval = setInterval(() => {
-            let random = Math.floor(Math.random() * imgsArray.length);
-            landingPage.style.cssText = `background-image: url('imgs/${imgsArray[random]}')`;
-        }, 5000);
-    }
+// Function to determine if the current device is a mobile device
+function isMobileDevice() {
+    return window.innerWidth <= 768; // Adjust this width based on your mobile breakpoint
 }
 
+// Function to change the background image
+function changeBackground() {
+    let imgsArrayDesktop = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"]; // Desktop images
+    let imgsArrayMobile = ["mobile.jpg", "ron-lach-2.jpg", "ron-lach.jpg", "ron.jpg, mart-production"]; // Mobile images
+
+    let imgsArray = isMobileDevice() ? imgsArrayMobile : imgsArrayDesktop;
+
+    changeInterval = setInterval(() => {
+        let random = Math.floor(Math.random() * imgsArray.length);
+        let imageUrl = isMobileDevice() ? `imgs/${imgsArray[random]}` : `imgs/${imgsArray[random]}`;
+        landingPage.style.backgroundImage = `url('${imageUrl}')`;
+    }, 5000);
+}
 
 // Call the function to start changing the background
 changeBackground();
-
 
 
 const bulletSpan = document.querySelectorAll(".Bullets-container span")
