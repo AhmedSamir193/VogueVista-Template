@@ -94,8 +94,8 @@ backgroundspans.forEach((span) => {
 
 
 // Progress Section
-const progressSection = document.querySelector(".skill-section");
-const spanProgress = Array.from(document.querySelectorAll(".skill-progress span"));
+const progressSection = document.querySelector(".most-sales-section");
+const spanProgress = Array.from(document.querySelectorAll(".sales-progress span"));
 
 // Helper function to handle scroll event with debounce
 function debounce(func, wait = 20, immediate = true) {
@@ -126,8 +126,9 @@ function handleScroll() {
 window.addEventListener('scroll', debounce(handleScroll));
 
 
+// popup img
 
-let popupImg = document.querySelectorAll(".img-container img");
+let popupImg = document.querySelectorAll(".gallery div img");
 
 popupImg.forEach((img) => {
     img.addEventListener("click", (e) => {
@@ -161,6 +162,14 @@ popupImg.forEach((img) => {
             overlay.classList.add('active');
             popupBox.classList.add('active');
         }, 10); // Small delay to ensure the elements are rendered
+
+        
+        
+    
+
+    overlay.addEventListener("click", () => {
+        removePopup()
+    })
     });
 });
 
@@ -215,7 +224,6 @@ function scroolToSection (elments) {
 }
 
 scroolToSection(bullets)
-scroolToSection(navLinks)
 
 
 function addActiveClass(ev) {
@@ -227,27 +235,26 @@ function addActiveClass(ev) {
 }
 
 // Change Background
-let landingPage = document.querySelector(".landing-page")
+let landingPage = document.querySelector(".landing-page");
 
+let imgsArray = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"];
 
-let imgsArray = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"]
+let backgroundOption = true;
 
-backgroundOption = true
+let changeInterval;
 
-let changeInterval
-
-function ChangeBackground() {
-
+function changeBackground() {
     if (backgroundOption === true) {
-        changeInterval = setInterval (() => {
-
-        let random = Math.floor(Math.random() * imgsArray.length)
-
-        landingPage.style.backgroundImage = 'url("/imgs/'+ imgsArray[random] +'")';
-
-    }, 5000)
+        changeInterval = setInterval(() => {
+            let random = Math.floor(Math.random() * imgsArray.length);
+            landingPage.style.cssText = `background-image: url('imgs/${imgsArray[random]}')`;
+        }, 5000);
+    }
 }
-}
+
+// Call the function to start changing the background
+changeBackground();
+
 
 const bulletSpan = document.querySelectorAll(".Bullets-container span")
 const navBullets = document.querySelector(".nav-bullets") 
@@ -360,3 +367,90 @@ links.onclick = function (e) {
     e.stopPropagation()
 }
 
+
+// Scroll Header
+window.addEventListener("scroll", function () {
+    const header = document.querySelector(".header")
+    header.classList.toggle("active", scrollY > 0)
+})
+
+
+
+// Scroll Section
+const gallery = document.querySelector(".gallery")
+const nextButtn = document.querySelector("#nextbtn")
+const backButtn = document.querySelector("#backbtn")
+
+
+gallery.addEventListener("wheel", (e) => {
+    e.preventDefault()
+    gallery.scrollLeft += e.deltaY
+    gallery.style.scrollBehavior = "auto"
+})
+
+
+nextButtn.addEventListener("click", () => {
+    gallery.style.scrollBehavior = "smooth"
+    gallery.scrollLeft += 900;
+})
+
+backButtn.addEventListener("click", () => {
+    gallery.style.scrollBehavior = "smooth"
+    gallery.scrollLeft -= 900;
+})
+
+
+
+    let sections = document.querySelectorAll(".section");
+    let headerLinksA = document.querySelectorAll(".header a");
+
+    window.addEventListener("scroll", () => {
+    sections.forEach((sec) => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute("id");
+
+        if (top >= offset - 100 && top < offset + height) {
+        headerLinksA.forEach((a) => {
+            a.classList.remove("active");
+            document
+            .querySelector(".header a[href*=" + id + "]")
+            .classList.add("active");
+        });
+        }
+    });
+    });
+
+
+    // Scroll To UP
+
+    const upIcon = document.querySelector(".up-icon")
+
+    window.addEventListener("scroll", (e) => {
+        if (scrollY >= 400) {
+            upIcon.classList.add("show")
+        } else {
+            upIcon.classList.remove("show")
+        }
+    })
+
+
+    upIcon.addEventListener("click", () => {
+        scrollTo({top: 0, behavior: "smooth"})
+    })
+
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("move");
+            } else {
+                entry.target.classList.remove("move");
+            }
+        });
+    });
+    
+    let sections2 = document.querySelectorAll(".hidden");
+    sections2.forEach((section) => observer.observe(section));
+    

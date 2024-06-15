@@ -6,11 +6,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="icon" href="./imgs/favicon.ico   ">
+    <link rel="icon" href="./imgs/favicon.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script defer src="./js/main.js"></script>
-    <title>Special Design</title>
+    <title>VogueVista</title>
 </head>
 <body>
+        <div class="up-icon">
+            <i class="fa-solid fa-circle-chevron-up"></i>
+        </div>
         <!-- Start Settings Box -->
         <div class="setting-box">
             <div class="setting-container">
@@ -20,11 +24,11 @@
                 <div class="option-box">
                     <h4>Colors</h4>
                     <ul class="color-lists">
-                        <li class="active" data-color="#9c27b0"></li>
-                        <li data-color="#ffc107"></li>
-                        <li data-color="#4caf50"></li>
-                        <li data-color="#009688"></li>
-                        <li data-color="#ff9800"></li>
+                        <li class="active" data-color="#008080"></li>
+                        <li data-color="#FA8072"></li>
+                        <li data-color="#8E4585"></li>
+                        <li data-color="#808000"></li>
+                        <li data-color="#4682B4"></li>
                     </ul>
                 </div>
                 <div class="option-box">
@@ -41,7 +45,12 @@
                         <span class="no" data-bullets="hidden">No</span>
                     </div>
                 </div>
-                <button class="reset">Reset Options</button>
+                <div class="option-box">
+                    <h4>Reset Options</h4>
+                    <div class="Bullets-container">
+                        <button class="reset">Reset</button>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- End Settings Box -->
@@ -57,126 +66,193 @@
             </div>
         <!-- End Nav Bullets -->
         <!-- Start Landing Section  -->
-    <div class="landing-page">
+    <div class="landing-page" id="landing">
         <div class="overlay"></div>
+        <div class="header"> 
+                <a class="logo" href="#landing"><img src="./imgs/wooden hanger.png" alt="" style="width: 50px;"></a>
+                <span class="logo-name">VogueVista</span>
+        <div class="links-container">
+            <div class="menu-container"><i class="fa-solid fa-bars"></i></div>
+            <ul class="links">
+                <li><a href="#about" class="active" data-section=".about-section">About</a></li>
+                <li><a href="#sales" data-section=".skill-section">Sales</a></li>
+                <li><a href="#gallery" data-section=".gallery-section">Products</a></li>
+                <li><a href="#timeline" data-section=".timeline">Timeline</a></li>
+                <li><a href="#feature" data-section=".feature">Features</a></li>
+                <li><a href="#testimonials" data-section=".testimonials">Testimonials</a></li>
+                <li><a href="#contact-us" data-section=".contact-us">Contact Us</a></li>
+            </ul>
+        </div>
+        </div>
 <div class="container">
-    <div class="header">
-        <div class="logo">Special Design</div>
-    <div class="links-container">
-        <div class="menu-container"><i class="fa-solid fa-bars"></i></div>
-        <ul class="links">
-            <li><a href="#" class="active" data-section=".about-section">About</a></li>
-            <li><a href="#" data-section=".skill-section">Skills</a></li>
-            <li><a href="#" data-section=".gallery-section">Gallery</a></li>
-            <li><a href="#" data-section=".timeline">Timeline</a></li>
-            <li><a href="#" data-section=".feature">Features</a></li>
-            <li><a href="#" data-section=".testimonials">Testimonials</a></li>
-            <li><a href="#" data-section=".contact-us">Contact Us</a></li>
-        </ul>
-    </div>
-    </div>
 </div>
         <div class="intro-text">
-            <h1>We Are <span>Creating</span> Agency</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non fuga quam, velit molestias ullam ea beatae laudantium sint, voluptates voluptatibus</p>
+            <span class="welcome hidden">Welocme to VogueVista Shop</span>
+            <h1 class="hidden">Explore our curated collection of <span>trendy</span> apparel</h1>
         </div>
 </div>
         <!-- End Landing Section  -->
         <!-- Start About Section -->
             <div class="container">
-                <div class="about-section">
+                <div class="about-section section" id="about">
                     <div class="info-box">
-                        <h2>About Us</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, iusto quis autem laudantium incidunt voluptatum quaerat eaque placeat error, nulla sed quos odit ut, in consectetur soluta delectus corrupti qui?</p>
+                        <h2 class="hidden">About Us</h2>
+                        <p class="hidden">Welcome to VogueVista, where fashion meets elegance. At VogueVista, we are passionate about offering you a curated selection of the latest trends and timeless classics in clothing and accessories. Our mission is to empower individuals to express their unique style through high-quality apparel that combines comfort, sophistication, and affordability.</p>
+                        <p class="hidden">Founded with a dedication to exceptional customer service and a commitment to sustainability, VogueVista strives to create a shopping experience that is as enjoyable as it is inspiring. Whether you're searching for the perfect outfit for a special occasion or upgrading your everyday wardrobe, our carefully curated collections ensure you'll find pieces that elevate your personal style.</p>
                     </div>
                     <div class="image-box">
-                        <img src="./imgs/19362653.jpg" alt="" style="width: 400px;">
+                        <img class="hidden" src="./imgs/Shop Clothes.jpg" alt="">
                     </div>
                 </div>
             </div>
         <!-- End About Section -->
         <!-- Start Skills Section -->
-                <div class="skill-section">
-                    <div class="container">
-                    <h4>Our Skills</h4>
-                    <div class="skill-box">
-                        <div class="skill-name">HTML</div>
-                        <div class="skill-progress">
-                            <span data-width="25%"></span>
-                        </div>
-                    </div>
-                    <div class="skill-box">
-                        <div class="skill-name">CSS</div>
-                        <div class="skill-progress">
-                            <span data-width="50%"></span>
-                        </div>
-                    </div>
-                    <div class="skill-box">
-                        <div class="skill-name">JavaScript  </div>
-                        <div class="skill-progress">
-                            <span data-width="75%"></span>
-                        </div>
-                    </div>
-                    <div class="skill-box">
-                        <div class="skill-name">React</div>
-                        <div class="skill-progress">
-                            <span data-width="60%"></span>
-                        </div>
-                    </div>
-                </div>
+<div class="most-sales-section section" id="sales">
+    <div class="container">
+        <h4 class="hidden">Most Sales</h4>
+        <div class="sales-box">
+            <div class="sales-item-name">Denim Jackets</div>
+            <div class="sales-progress">
+                <span data-width="75%"></span>
             </div>
+        </div>
+        <div class="sales-box">
+            <div class="sales-item-name">Summer Dresses</div>
+            <div class="sales-progress">
+                <span data-width="50%"></span>
+            </div>
+        </div>
+        <div class="sales-box">
+            <div class="sales-item-name">Graphic T-Shirts</div>
+            <div class="sales-progress">
+                <span data-width="40%"></span>
+            </div>
+        </div>
+        <div class="sales-box">
+            <div class="sales-item-name">Leather Boots</div>
+            <div class="sales-progress">
+                <span data-width="55%"></span>
+            </div>
+        </div>
+        <div class="sales-box">
+            <div class="sales-item-name">Sports Leggings</div>
+            <div class="sales-progress">
+                <span data-width="66%"></span>
+            </div>
+        </div>
+        <div class="sales-box">
+            <div class="sales-item-name">Crop Tops</div>
+            <div class="sales-progress">
+                <span data-width="80%"></span>
+            </div>
+        </div>
+    </div>
+</div>
         <!-- End Skills Section -->
         <!-- Start Gallery Section -->
+        <div class="gallery-section section" id="gallery">
+            <h2 class="hidden">Our Products</h2>
             <div class="container">
-            <div class="gallery-section">
-                <h2>Our Gallery</h2>
-                <div class="img-container">
-                    <img src="./imgs/01.jpg" alt="Table">
-                    <img src="./imgs/02.jpg" alt="Clouds">
-                    <img src="./imgs/03.jpg" alt="Clouds">
-                    <img src="./imgs/04.jpg" alt="Coffe & Keyboard">
-                    <img src="./imgs/05.jpg" alt="Table">
-                    <img src="./imgs/06.jpg" alt="">
-                    <img src="./imgs/07.jpg" alt="">
-                    <img src="./imgs/08.jpg" alt="">
-                    <img src="./imgs/09.jpg" alt="">
-                    <img src="./imgs/10.jpg" alt="Sea">
+            <div class="gallery-wrap">
+                <img src="./imgs/back.png" id="backbtn">
+                <div class="gallery">
+                    <div>
+                        <img src="./imgs/Elegant Blouse.jpg" alt="Elegant Blouse">
+                        <img src="./imgs/Floar summer dress.jpg" alt="Float Summer">
+                        <img src="./imgs/Maxi Skirt.jpg" alt="Maxi Skirt">
+                    </div>
+                    <div>
+                        <img src="./imgs/Sports Leggings.jpg" alt="Sports Leggings">
+                        <img src="./imgs/Top.jpg" alt="Top">
+                        <img src="./imgs/Maternity Clothing.jpg" alt="Maternity">
+                    </div>
                 </div>
+                <img src="./imgs/next.png" id="nextbtn">
             </div>
+        </div>
         </div>
         <!-- End Gallery Section -->
 <!-- Start Timeline Section -->
-<div class="timeline">
+<div class="timeline section" id="timeline">
     <div class="container">
         <div class="timeline-content">
-            <div class="year">2023</div>
+            <div class="year">2019</div>
             <div class="clear-fix"></div>
             <div class="left">
                 <div class="content">
-                    <h3>Test Heading</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, aperiam! Quia consectetur recusandae commodi veniam maxime! Vel quaerat impedit iste. Id consequatur repellendus explicabo praesentium incidunt ipsum doloribus obcaecati possimus.</p>
+                    <h3>Founding of VogueVista</h3>
+                    <p class="hidden">VogueVista was founded with the vision to provide high-quality, stylish, and affordable clothing. Our journey began in a small boutique, driven by a passion for fashion and a commitment to customer satisfaction.</p>
                 </div>
             </div>
             <div class="clear-fix"></div>
             <div class="right">
                 <div class="content">
-                    <h3>Test Heading</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, aperiam! Quia consectetur recusandae commodi veniam maxime! Vel quaerat impedit iste. Id consequatur repellendus explicabo praesentium incidunt ipsum doloribus obcaecati possimus.</p>
+                    <h3>First Collection Launch</h3>
+                    <p class="hidden">Our first collection, 'Urban Essentials', was launched, featuring a range of versatile and trendy pieces designed for modern city life. The collection received an overwhelming response, establishing VogueVista as a brand to watch.</p>
+                </div>
+            </div>
+            <div class="clear-fix"></div>
+            <div class="year">2020</div>
+            <div class="clear-fix"></div>
+            <div class="left">
+                <div class="content">
+                    <h3>Online Store Launch</h3>
+                    <p class="hidden">In response to growing demand, we launched our online store, making VogueVista's unique styles accessible to customers worldwide. This marked a significant milestone in our expansion efforts.</p>
+                </div>
+            </div>
+            <div class="clear-fix"></div>
+            <div class="right">
+                <div class="content">
+                    <h3>Sustainability Initiative</h3>
+                    <p class="hidden">We introduced our sustainability initiative, committing to using eco-friendly materials and ethical manufacturing processes. Our 'Green Line' collection featured clothes made from organic fabrics and recycled materials.</p>
+                </div>
+            </div>
+            <div class="clear-fix"></div>
+            <div class="year">2021</div>
+            <div class="clear-fix"></div>
+            <div class="left">
+                <div class="content">
+                    <h3>Pop-Up Shops and Collaborations</h3>
+                    <p class="hidden">We expanded our physical presence with pop-up shops in major cities and collaborated with renowned designers to create exclusive limited-edition pieces, further enhancing our brand's appeal.</p>
+                </div>
+            </div>
+            <div class="clear-fix"></div>
+            <div class="right">
+                <div class="content">
+                    <h3>Introduction of Plus-Size Collection</h3>
+                    <p class="hidden">VogueVista introduced an inclusive plus-size collection, ensuring that fashion is accessible to everyone, regardless of size. This collection received praise for its stylish and flattering designs.</p>
+                </div>
+            </div>
+            <div class="clear-fix"></div>
+            <div class="year">2023</div>
+            <div class="clear-fix"></div>
+            <div class="left">
+                <div class="content">
+                    <h3>Technological Innovations</h3>
+                    <p class="hidden">We integrated augmented reality (AR) into our online shopping experience, allowing customers to virtually try on clothes before making a purchase. This innovative feature set us apart in the e-commerce space.</p>
+                </div>
+            </div>
+            <div class="clear-fix"></div>
+            <div class="right">
+                <div class="content">
+                    <h3>Award Recognition</h3>
+                    <p class="hidden">VogueVista was recognized with the 'Best Emerging Fashion Brand' award, celebrating our commitment to quality, style, and customer satisfaction. This accolade solidified our reputation in the industry.</p>
                 </div>
             </div>
             <div class="clear-fix"></div>
             <div class="year">2024</div>
-            <div class="left">
-                <div class="content">
-                    <h3>Test Heading</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, aperiam! Quia consectetur recusandae commodi veniam maxime! Vel quaerat impedit iste. Id consequatur repellendus explicabo praesentium incidunt ipsum doloribus obcaecati possimus.</p>
-                </div>
-            </div>
             <div class="clear-fix"></div>
             <div class="left">
                 <div class="content">
-                    <h3>Test Heading</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, aperiam! Quia consectetur recusandae commodi veniam maxime! Vel quaerat impedit iste. Id consequatur repellendus explicabo praesentium incidunt ipsum doloribus obcaecati possimus.</p>
+                    <h3>Global Expansion</h3>
+                    <p class="hidden">We expanded our reach by opening flagship stores in key international markets, bringing VogueVista's unique fashion sense to a global audience. This was a major step in our growth journey.</p>
+                </div>
+            </div>
+            <div class="clear-fix"></div>
+            <div class="right">
+                <div class="content">
+                    <h3>Future Goals</h3>
+                    <p class="hidden">Looking ahead, VogueVista aims to continue innovating and expanding. Our goals include launching new sustainable collections, enhancing our digital presence, and fostering community engagement through fashion events.</p>
                 </div>
             </div>
         </div>
@@ -184,76 +260,119 @@
 </div>
 <!-- End Timeline Section -->
 <!-- Start Features Section -->
-<div class="feature">
+<div class="feature section" id="feature">
     <h2>Our Features</h2>
     <div class="container">
         <div class="boxes">
             <div class="feat-box">
-                <img src="./imgs/cloud-computing.png" alt="">
-                <h4>cloud computing</h4>
-                <p>design and manage an organization's cloud computing strategy.</p>
+                <img class="hidden" src="./imgs/high-quality.png" alt="High Quality Materials">
+                <h4>High Quality Materials</h4>
+                <p>Our clothes are made from premium fabrics to ensure durability, comfort, and a luxurious feel.</p>
             </div>
             <div class="feat-box">
-                <img src="./imgs/data-scientist.png" alt="">
-                <h4>data scientist</h4>
-                <p>Data scientists analyze and interpret complex data sets to help organizations make informed decisions. </p>
+                <img class="hidden" src="./imgs/sustainable.png" alt="Sustainable Practices">
+                <h4>Sustainable Practices</h4>
+                <p>We prioritize sustainability by using eco-friendly materials and ethical manufacturing processes.</p>
             </div>
             <div class="feat-box">
-                <img src="./imgs/server-administration.png" alt="">
-                <h4>server administration</h4>
-                <p>Server administrators are responsible for managing, maintaining, and ensuring the optimal performance </p>
+                <img class="hidden" src="./imgs/trendy-designs.png" alt="Trendy Designs">
+                <h4>Trendy Designs</h4>
+                <p>Stay ahead of the fashion curve with our regularly updated collections featuring the latest trends and styles.</p>
             </div>
             <div class="feat-box">
-                <img src="./imgs/administration.png" alt="">
-                <h4>administration</h4>
-                <p>System administrators are responsible for managing and maintaining an organization's IT infrastructure.</p>
+                <img class="hidden" src="./imgs/inclusive-sizing.png" alt="Inclusive Sizing">
+                <h4>Inclusive Sizing</h4>
+                <p>We offer a wide range of sizes to ensure everyone can find their perfect fit, promoting body positivity and inclusivity.</p>
             </div>
             <div class="feat-box">
-                <img src="./imgs/development.png" alt="">
-                <h4>development</h4>
-                <p>Front-end developers are responsible for creating the visual and interactive aspects of a website or web application. </p>
+                <img class="hidden" src="./imgs/affordable-prices.png" alt="Affordable Prices">
+                <h4>Affordable Prices</h4>
+                <p>We believe in offering high-quality fashion at prices that won't break the bank.</p>
             </div>
             <div class="feat-box">
-                <img src="./imgs/database.png" alt="">
-                <h4>database</h4>
-                <p>DBAs manage and maintain an organization's databases, ensuring they are secure, efficient, and accessible.</p>
+                <img class="hidden" src="./imgs/customer-service.png" alt="Excellent Customer Service">
+                <h4>Excellent Customer Service</h4>
+                <p>Our dedicated customer support team is here to assist you with any queries or issues, ensuring a seamless shopping experience.</p>
             </div>
         </div>
     </div>
 </div>
 <!-- End Features Section -->
 <!-- Start Testimonials Section -->
-<div class="testimonials">
+<div class="testimonials section" id="testimonials">
     <div class="container">
-        <h4>Testimonials</h4>
+        <h4 class="hidden">Testimonials</h4>
+        <h2 class="hidden">What Our Clients Say</h2>
         <div class="grid">
             <div class="ts-box">
-                <h2>Your team was incredibly attentive to my needs and ensured that every detail was addressed promptly.</h2>
+                <h2>The quality and style of the clothes at VogueVista are unmatched. I always receive compliments when I wear their outfits!</h2>
                 <div class="ts-info">
-                    <img src="./imgs/Avatar1.jpg" alt="" style="width: 80px;">
+                    <div class="img-container">
+                    <img src="./imgs/person.jpg" alt="Noor Mohamed" style="width: 80px;">
+                </div>
                     <div class="info">
                         <span class="name">Noor Mohamed</span>
-                        <span class="job">CEO At ABC Company</span>
+                        <span class="job">Fashion Blogger</span>
                     </div>
                 </div>
             </div>
             <div class="ts-box">
-                <h2>Your team was incredibly attentive to my needs and ensured that every detail was addressed promptly.</h2>
+                <h2>VogueVista’s commitment to sustainability is impressive. I feel good knowing my purchases support eco-friendly practices.</h2>
                 <div class="ts-info">
-                    <img src="./imgs/Avatar2.jpg" alt="" style="width: 80px;">
+                    <div class="img-container">
+                        <img src="./imgs/person.jpg" alt="Noor Mohamed" style="width: 80px;">
+                    </div>
                     <div class="info">
-                        <span class="name">Mostafa Mohamed</span>
-                        <span class="job">CEO At ABC Company</span>
+                        <span class="name">Mostafa Ali</span>
+                        <span class="job">Eco-Conscious Shopper</span>
                     </div>
                 </div>
             </div>
             <div class="ts-box">
-                <h2>Your team was incredibly attentive to my needs and ensured that every detail was addressed promptly.</h2>
+                <h2>I love the inclusive sizing range at VogueVista. It’s refreshing to find stylish clothes that fit perfectly.</h2>
                 <div class="ts-info">
-                    <img src="./imgs/Avatar3.jpg" alt="" style="width: 80px;">
+                    <div class="img-container">
+                        <img src="./imgs/person.jpg" alt="Noor Mohamed" style="width: 80px;">
+                    </div>
                     <div class="info">
-                        <span class="name">Mahmoued Ahmed</span>
-                        <span class="job">CEO At ABC Company</span>
+                        <span class="name">Mahmoud Ahmed</span>
+                        <span class="job">Plus-Size Model</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ts-box">
+                <h2>The customer service at VogueVista is exceptional. They went above and beyond to ensure my satisfaction with my order.</h2>
+                <div class="ts-info">
+                    <div class="img-container">
+                        <img src="./imgs/person.jpg" alt="Noor Mohamed" style="width: 80px;">
+                    </div>
+                    <div class="info">
+                        <span class="name">Sarah Johnson</span>
+                        <span class="job">Frequent Buyer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ts-box">
+                <h2>The trendy designs and affordable prices make VogueVista my go-to shop for fashion-forward outfits.</h2>
+                <div class="ts-info">
+                    <div class="img-container">
+                        <img src="./imgs/person.jpg" alt="Noor Mohamed" style="width: 80px;">
+                    </div>
+                    <div class="info">
+                        <span class="name">Emily Chen</span>
+                        <span class="job">College Student</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ts-box">
+                <h2>From the quality to the fit, every purchase from VogueVista has exceeded my expectations.</h2>
+                <div class="ts-info">
+                    <div class="img-container">
+                        <img src="./imgs/person.jpg" alt="Noor Mohamed" style="width: 80px;">
+                    </div>
+                    <div class="info">
+                        <span class="name">David Smith</span>
+                        <span class="job">Fitness Enthusiast</span>
                     </div>
                 </div>
             </div>
@@ -262,25 +381,37 @@
 </div>
 <!-- End Testimonials Section -->
 <!-- Start Contact Us Section -->
-    <div class="contact-us">
+<div class="contact-us section" id="contact-us">
+    <div class="container">
         <h2>Contact Us</h2>
-        <div class="container">
-            <div class="left">
-                <input type="text" placeholder="Your Name">
-                <input type="mobile" placeholder="Your Phone">
-                <input type="email" placeholder="Your Email">
-                <input type="text" placeholder="Subject">
+        <div class="contact">
+            <div class="form">
+                <p>Get in Touch with Us!</p>
+                <div class="left">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="tel" placeholder="Your Phone" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="text" placeholder="Subject" required>
+                </div>
+                <div class="right">
+                    <textarea placeholder="Your Message" required></textarea>
+                    <input type="submit" value="Send">
+                </div>
             </div>
-            <div class="right">
-                <textarea placeholder="Your Message"></textarea>
-                <input type="submit" value="Send">
+            <div class="image">
+                <img src="./imgs/Contact Us.jpg" alt="Our Shop">
             </div>
         </div>
     </div>
+</div>
 <!-- End Contact Us Section -->
 <!-- Start Footer Section -->
     <div class="footer">
-        Made By Ahmed Samir
+        <span><i class="fa-brands fa-facebook"></i></span>
+        <span><i class="fa-brands fa-instagram"></i></i></span>
+        <span><i class="fa-brands fa-twitter"></i></span>
+        <span><i class="fa-brands fa-pinterest"></i></span>
+        <p>Copy Right 2024 © All Rights Reserved</p>
     </div>
 <!-- End Footer Section -->
 </body>
